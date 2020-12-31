@@ -31,8 +31,8 @@ export default function Menu() {
         <nav className={ menuClasses }>
             <ul style={{ listStyle: 'none' }}>
                 <li className="menu-item"><Link href="/">Work</Link></li>
-                <li className="menu-item"><Link href="/about">About</Link></li>
-                <li className="menu-item"><Link href="/contact">Get in touch</Link></li>
+                <li className="menu-item"><Link href="/">About</Link></li>
+                <li className="menu-item"><Link href="/">Get in touch</Link></li>
             </ul>
             
         </nav>
