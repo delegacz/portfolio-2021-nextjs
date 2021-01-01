@@ -7,14 +7,14 @@ export default function Project({ content }) {
     console.log(content)
     return(
         <>
-        <h1>{content.projecy.project_title[0].text}</h1>
-        <p>{content.projecy.project_short_description[0].text}</p>
+        <h1>{content.project_title[0].text}</h1>
+        <p>{content.project_short_description[0].text}</p>
         </>
     )
 }
 
 export async function getStaticProps(params) {
-    const content = await getProjectData(params.params.uid)
+    const content = await getProjectData(params.uid)
     return {
         props: {
            content,
