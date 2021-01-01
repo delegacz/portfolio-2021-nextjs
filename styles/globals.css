@@ -137,11 +137,16 @@ p,a,span,li,body {
   .section-number {
     -webkit-text-stroke: 1px white;
     -webkit-text-fill-color: #111819;
+    
   }
 }
 .section-number {
   font-family: "Britanica-Regular";
   font-size: 288px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .section-header {
   flex-direction: row;

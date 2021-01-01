@@ -1,12 +1,16 @@
 import { useRouter } from 'next/router'
 import { getProjectData } from '../lib/api'
 import { getAllProjectsWithSlug } from '../lib/api'
+import Link from 'next/link'
 
 export default function Project({ content }) {
     const router = useRouter()
     console.log('content >',content)
     if(content === undefined) {
-            return <>error getting data from prismic</>
+            return <>
+                <h1>There has been an error getting data from CMS</h1>
+                <Link href='/'>Go back home</Link>
+                </>
         
     } else {
         return(

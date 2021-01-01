@@ -13,7 +13,16 @@ export default function Pointer() {
         addEventListener();
         handleLinkHoverEvents();
         return () => removeEventListener();
+        
     },[])
+    
+    const resetState = () => {
+        console.log('pops')
+        setHidden(false)
+        setClicked(false)
+        setLinkHovered(false)
+        setLinkHoveredOnProject(false)
+    }
 
     const addEventListener = () => {
         document.addEventListener('mousemove',onMouseMove)

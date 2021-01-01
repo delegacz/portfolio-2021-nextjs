@@ -16,13 +16,11 @@ export default function ProjectGrid({ projects }) {
         projects.map((p,count) => {
             count++
             let addedClass = ((count === 3) ? 'project-thumbnail-small' : 'project-thumbnail-normal')
-            return (<ProjectTile cname={ addedClass } project={p}/>) 
-
+            return (<ProjectTile key={ count } cname={ addedClass } project={p}/>) 
         })
         }
         </div>
     </section>
     )
-    
 }
 
