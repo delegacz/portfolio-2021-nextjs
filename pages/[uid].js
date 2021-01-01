@@ -14,7 +14,7 @@ export default function Project({ content }) {
 }
 
 export async function getStaticProps(params) {
-    const content = await getProjectData(params.uid)
+    const content = await getProjectData(params.params.uid)
     return {
         props: {
            content,
