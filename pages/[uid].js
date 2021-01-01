@@ -4,7 +4,7 @@ import { getAllProjectsWithSlug } from '../lib/api'
 
 export default function Project({ content }) {
     const router = useRouter()
-    console.log('content > 'content)
+    console.log('content >',content)
     if(content === undefined) {
             return <>error getting data from prismic</>
         
