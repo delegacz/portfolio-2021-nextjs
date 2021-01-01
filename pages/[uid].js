@@ -4,13 +4,19 @@ import { getAllProjectsWithSlug } from '../lib/api'
 
 export default function Project({ content }) {
     const router = useRouter()
-    console.log(content)
-    return(
-        <>
-        <h1>{content.project_title[0].text}</h1>
-        <p>{content.project_short_description[0].text}</p>
-        </>
-    )
+    console.log('content > 'content)
+    if(content === undefined) {
+            return <>error getting data from prismic</>
+        
+    } else {
+        return(
+            <>
+            <h1>{content.project_title[0].text}</h1>
+            <p>{content.project_short_description[0].text}</p>
+            </>
+        )
+    }
+   
 }
 
 export async function getStaticProps(params) {
