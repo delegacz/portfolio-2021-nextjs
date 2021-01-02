@@ -133,8 +133,12 @@ nav.menu.menu-active {
   justify-content: left;
   width: 100%;
 }
-.hero-tagline {display: inline-block; width: 60%;}
-.capability-list{display: inline-block; max-width:30%;}
+.hero-tagline {
+  display: inline-block; width: 60%;
+}
+.capability-list{
+  display: inline-block; max-width:30%;
+}
 .branding {
   display: inline-block;
   padding-top: 50px;
@@ -147,6 +151,25 @@ nav.menu.menu-active {
   color: #fff;
   text-decoration: none;
 }
+.dwnld {
+  padding: 8px 42px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 32px;
+  border: solid 2px #fff;
+  background: transparent;
+  color: #fff;
+  transition: all 1s;
+}
+.dwnld:hover {
+  border: solid 2px #CEFF1A;
+  color: #CEFF1A;
+}
+.dwnld a {
+  text-decoration: none;
+  color: #fff;
+}
+
 html, body {
   cursor: none;
 }
