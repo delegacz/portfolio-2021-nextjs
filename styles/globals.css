@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 :root {
   font-size: 16px;
   --scale-element:1;
@@ -6,18 +7,21 @@
   color: #fff;
   overflow-x: hidden;
 }
-#menu-toogle {
+
+.menu-toogle {
   min-width: 32px;
   min-height: 32px;
   border-radius: 100%;
   background-color:#fefefe;
 }
-#menu-toogle:before {
+
+.menu-toogle:before {
  content: 'x';
  width: 32px;
  height: 32px;
  padding: 0 7px;
 }
+
 .pointer {
   width: 32px;
   height: 32px;
@@ -32,9 +36,11 @@
   transition-property:  opacity, background-color, transform, mix-blend-mode;
 }
 
+
 .pointer--hidden {
   opacity: 0;
 }
+
 .pointer--clicked {
      transform: translate(-50%, -50%) scale(0.9);
      background-color: #fefefe;
@@ -91,11 +97,48 @@ nav.menu.menu-active {
   align-items: center;
   justify-content: space-between;
 }
-.menu,
-.branding {
+.header-sticky  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.18);
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  left: 0;
+  transition: 260ms ease-out;
+  transform: translateY(-140px);
+  background-color: #111819;
+}
+.header-sticky-active {
+  transform: translateY(0);
+}
+.header-sticky .branding {
+  display: inline-block;
+  padding-top: 10px;
+}
+.header-sticky .menu {
+  display: inline-block;
+  padding: 10px 10px;
+}
+.menu {
   display: inline-block;
 }
-
+.hero-content-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: left;
+  width: 100%;
+}
+.hero-tagline {display: inline-block; width: 60%;}
+.capability-list{display: inline-block; max-width:30%;}
+.branding {
+  display: inline-block;
+  padding-top: 50px;
+}
 .menu nav {
   padding-top: 2rem;
 }
@@ -130,9 +173,7 @@ p,a,span,li,body {
   font-size: 1.125rem;
   font-weight: 800;
 }
-.branding {
-  padding-top: 50px;
-}
+
 @supports (-webkit-text-stroke: 1px white) {
   .section-number {
     -webkit-text-stroke: 1px white;

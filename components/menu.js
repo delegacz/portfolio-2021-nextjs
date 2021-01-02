@@ -12,14 +12,17 @@ export default function Menu() {
     },[])
 
     const handleClick = () => {
-        document.getElementById('menu-toogle')
-        .addEventListener('click',changeActive);
+        const el = document.querySelectorAll('.menu-toogle')
+        el.forEach(e => {
+            e.addEventListener('click', changeActive);
+            console.log('assigned', e)
+        })
+        console.log('pop')
     }
 
     const changeActive = () => {
         setActive(active => !active);
     }
-    
 
     const menuClasses = classNames(
         'menu',
@@ -37,7 +40,7 @@ export default function Menu() {
                 <li className="menu-item"><Link href="/">Get in touch</Link></li>
             </ul>
         </nav>
-        <span id="menu-toogle"></span>
+        <span class="menu-toogle"></span>
         </>
     )
 }
