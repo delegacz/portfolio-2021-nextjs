@@ -22,8 +22,8 @@ function MyApp({ Component, pageProps, router }) {
   return (
   <>  
       <Pointer key={ router.route }/> 
+      <Header/>
       <Layout>
-        <Header/>
       <motion.div key={ router.route } 
       initial = "pageInitial" 
       animate = "pageAnimate" 

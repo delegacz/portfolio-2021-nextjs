@@ -1,0 +1,75 @@
+@use './modules/colors' as c 
+@use './modules/projectGrid'
+@use './modules/pointer'
+@use './modules/typography'
+@use './modules/header'
+@use './modules/layout'
+
+:root
+  font-size: 16px 
+  --scale-element:1 
+  --scale-font:1 
+  color: c.$bodyText 
+ 
+.hero-content-wrapper  
+  display: flex 
+  align-items: center 
+  align-content: center 
+  justify-content: left 
+  width: 100% 
+ 
+.hero-tagline  
+  display: inline-block  
+  width: 60% 
+ 
+.capability-list 
+  display: inline-block  
+  max-width: 30%
+ 
+.dwnld  
+  padding: 8px 42px 
+  font-size: 18px 
+  font-weight: 700 
+  border-radius: 32px 
+  border: solid 2px c.$light 
+  background: transparent 
+  color: c.$light 
+  transition: all 1s 
+ 
+.dwnld:hover  
+  border: solid 2px c.$lime
+  color: c.$lime
+ 
+.dwnld a  
+  text-decoration: none 
+  color: c.$light
+ 
+.list-head  
+  font-size: 1.125rem 
+  font-weight: 800 
+ 
+@supports (-webkit-text-stroke: 1px white)  
+  .section-number  
+    -webkit-text-stroke: 1px c.$light 
+    -webkit-text-fill-color: c.$bg-color 
+ 
+.section-number  
+  font-family: "Britanica-Regular" 
+  font-size: 288px 
+  -webkit-user-select: none 
+  -moz-user-select: none 
+  -ms-user-select: none 
+  user-select: none 
+ 
+.section-header  
+  flex-direction: row 
+  justify-content: space-between 
+  align-items: center 
+  align-content: center 
+  display: flex 
+  z-index: 1 
+ 
+
+ 
+
+

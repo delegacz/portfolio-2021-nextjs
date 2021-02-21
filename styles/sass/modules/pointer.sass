@@ -1,0 +1,53 @@
+html, body  
+  cursor: none 
+
+.pointer--hidden  
+  opacity: 0 
+
+a  
+  cursor: none 
+ 
+
+.pointer  
+  width: 32px 
+  height: 32px 
+  border: 2px solid #fefefe 
+  border-radius: 100% 
+  position: fixed 
+  transform: translate(-50%, -50%) 
+  pointer-events: none 
+  z-index: 9999 
+  mix-blend-mode: difference 
+  transition: all 350ms ease 
+  transition-property:  opacity, background-color, transform, mix-blend-mode  
+
+.pointer--clicked  
+     transform: translate(-50%, -50%) scale(0.9) 
+     background-color: #fefefe 
+ 
+.pointer--link-project--hovered  
+     transform: translate(-50%, -50%) scale(1.25) 
+     background-color: #CEFF1A 
+     mix-blend-mode: normal 
+     border: none 
+     width: 40px 
+     height: 40px 
+ 
+.pointer--link-hovered 
+  background-color: #FFF 
+  mix-blend-mode: difference 
+  width: 40px 
+  height: 40px 
+  border: none 
+  cursor: none 
+
+.pointer--link-project--hovered::after 
+  content: 'View' 
+  position: absolute 
+  color: #111819 
+  font-size: 10px 
+  font-family: "Space Mono", monospace 
+  font-weight: 700 
+  top: 12px 
+  left: 7px 
+  mix-blend-mode: normal 

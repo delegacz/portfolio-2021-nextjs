@@ -15,19 +15,19 @@ export default function ProjectTile({ project, cname }) {
 
     return(
         <Link href={ project.node._meta.uid }>
-            <div className="project-tile">
-                
-                <div className={cname} 
+            <div className={ cname }>
+                <div 
                 style={ 
                     {
                         backgroundImage: `url(${ imgUrl() })`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center, center',
                         backgroundRepeat: 'no-repeat',
+                        width: "100%",
+                        height: "100%"
                         }
                     }> 
                 </div>
-                
                 <h3>{ project.node.project_title[0].text }</h3>
             </div>
         </Link>

@@ -8,8 +8,8 @@ export default function Home(props) {
   const projects = props.projects
   return (
     <>
-    <Hero heroContent={heroContent}/>
-    <ProjectGrid projects={projects}/>
+      <Hero heroContent={heroContent}/>
+      <ProjectGrid projects={projects}/>
     </>
 )}
 

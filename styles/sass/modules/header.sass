@@ -1,0 +1,76 @@
+@use './colors' as c 
+.header  
+  display: flex 
+  align-items: center 
+  justify-content: space-between 
+ 
+.header-sticky   
+  display: flex 
+  align-items: center 
+  justify-content: space-between 
+  position: fixed 
+  top: 0 
+  z-index: 999 
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.18) 
+  width: calc(100% - 40px) 
+  padding: 0 20px 
+  left: 0 
+  transition: 260ms ease-out 
+  transform: translateY(-140px) 
+  background-color: c.$bg-color 
+ 
+.header-sticky-active  
+  transform: translateY(0) 
+ 
+.header-sticky .branding  
+  display: inline-block 
+  padding-top: 10px 
+ 
+.header-sticky .menu  
+  display: inline-block 
+  padding: 10px 10px 
+
+/*menu-nav*/
+.menu-toogle 
+  min-width: 32px 
+  min-height: 32px 
+  border-radius: 100% 
+  background-color: c.$light 
+
+.menu-toogle:before  
+ content: 'x' 
+ width: 32px 
+ height: 32px 
+ padding: 0 7px 
+
+nav.menu  
+  transition: 0.2s 
+  opacity: 0 
+  transform: translateX(600px) 
+  transition-timing-function: cubic-bezier(0.35, 0.01, 1, 0) 
+ 
+nav.menu.menu-active  
+  opacity: 1 
+  transform: translateX(0px) 
+  display: inline-block 
+  transition: 0.25s 
+  transition-timing-function: cubic-bezier(0, 0.01, 0, 1)  
+ 
+.menu-item  
+  display: inline-block 
+  margin-right: 2rem 
+ 
+.menu  
+  display: inline-block
+
+.menu nav  
+  padding-top: 2rem 
+ 
+.menu-item a  
+  list-style: none 
+  color: c.$light 
+  text-decoration: none
+
+.branding  
+  display: inline-block 
+  padding-top: 50px 

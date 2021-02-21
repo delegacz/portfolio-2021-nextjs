@@ -8,7 +8,9 @@ import arrowDownCircleFill from '@iconify/icons-bi/arrow-down-circle-fill';
 
 export default function DownloadResume() {
     const [isHovered, setHover] = useState(false)
-    useEffect(() => {},[])
+   
+
+
     const btnClasses = classNames(
         'dwnld',
         {
