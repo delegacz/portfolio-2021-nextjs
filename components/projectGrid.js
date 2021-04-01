@@ -2,49 +2,28 @@ import React, { Component } from 'react'
 import ProjectTile from './projectTile'
 import SectionNumber from './sectionnumber'
 import { Grid } from '@material-ui/core'
+import Link from 'next/link'
 export default function ProjectGrid({ projects }) {
     
     return(
     <section className="project-grid">
-        <div className="section-header">
+        <div className="section-header" style={{position: 'relative'}}>
             <h3 className="section-title">Work</h3>
             <SectionNumber number={'01'}/>
         </div>
         <Grid  container spacing={2} className="project-items">
-              {
-                
-              projects.map((p, count) => {
-                    
-                  console.log(p, count)
-                  if(count == 0) { 
-                    count++
-                    console.log(count)
+            {
+            
+              projects.map((p,c) => {
+                    c++
                     return (
-                        <Grid item xs={12} md={8}>
-                            <ProjectTile key={ count } project={p} cname={ 'project-tile-case-1' }/>
-                        </Grid>
-                    )}
-                    else if(count == 1) {
-                        count++
-                        console.log(count)
-                        return (
-                            <Grid item xs={12} md={4}>
-                                <ProjectTile key={ count } project={p} cname={ 'project-tile-case-2' } />
+                        <Link href={ p.node._meta.uid }>
+                            <Grid item xs={12} className={c%2==0 ? 'project_even' :'project_odd'}>  
+                                    <ProjectTile key={ p.id } project={p} count={c}/>
                             </Grid>
-                        )
-                    }
-                    else{
-                        count++
-                        console.log(count)
-                        return (
-                            <Grid item xs={12} md={6}>
-                                <ProjectTile key={ count } project={p} cname={ 'project-tile-case-3' }/>
-                            </Grid>
-                        )
-                    }
-                    
-                    
-              })}
+                        </Link>
+                    )})
+            }
         </Grid>
     </section>
     )

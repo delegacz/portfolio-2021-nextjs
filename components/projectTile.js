@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function ProjectTile({ project, cname }) {
+export default function ProjectTile({ project, count }) {
     
     function imgUrl() {
         if(project.node.project_main_image == null) {
@@ -12,24 +12,22 @@ export default function ProjectTile({ project, cname }) {
             return project.node.project_main_image.url
         }
     }
-
     return(
-        <Link href={ project.node._meta.uid }>
-            <div className={ cname }>
-                <div 
-                style={ 
-                    {
-                        backgroundImage: `url(${ imgUrl() })`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center, center',
-                        backgroundRepeat: 'no-repeat',
-                        width: "100%",
-                        height: "100%"
-                        }
-                    }> 
-                </div>
-                <h3>{ project.node.project_title[0].text }</h3>
-            </div>
-        </Link>
+            <>
+                <h3 className="project-title">{ project.node.project_title[0].text }</h3>
+                <div className="project-tile" style={ 
+                        {
+                            backgroundImage: `url(${ imgUrl() })`,
+                            backgroundSize: 'cover',
+                            display: 'block',
+                            float: count%2==0 ? 'left' : 'right',
+                            backgroundPosition: 'center, center',
+                            backgroundRepeat: 'no-repeat',
+                            width: "90%",
+                            height: "100%"
+                            }
+                        }> 
+                </div>                 
+            </>
     )
 }

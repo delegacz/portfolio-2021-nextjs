@@ -25,7 +25,7 @@ export default function Hero({heroContent}) {
                         }
                     }
                 }}>{ heroContent.hero_text[0].text }</motion.h1></Grid>
-            <Grid item md={12}>
+            <Grid item md={12} style={{marginBottom: '32px'}}>
                 <div className="hero-content-wrapper">
                 <Grid item md={8}>
                 <div className="hero-tagline">
@@ -41,8 +41,10 @@ export default function Hero({heroContent}) {
                                 }
                             )}
                       
-                </Grid></Grid>
-                </div></Grid>
+                    </Grid>
+                </Grid>
+                </div>
+            </Grid>
             <DownloadResume/>
         </div>
         </Grid>

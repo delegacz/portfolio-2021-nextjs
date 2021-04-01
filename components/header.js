@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Menu from './menu'
 import classNames from "classnames";
+import Logo from './logo'
 
 export default function Header()  {
     const [isSticky, setSticky] = useState(false)
@@ -40,7 +41,7 @@ export default function Header()  {
                     <div className="header">
                         <div className="branding">
                             <Link href="/">
-                                <Image src="/logo.svg" width="96" height="38"/>
+                                <Logo />
                             </Link>
                         </div>
                         <div className="menu">
@@ -50,7 +51,7 @@ export default function Header()  {
                     <div className={ stickyClass }>
                         <div className="branding">
                             <Link href="/">
-                                <Image src="/logo.svg" width="96" height="38"/>
+                                <Logo />
                             </Link>
                         </div>
                         <div className="menu">

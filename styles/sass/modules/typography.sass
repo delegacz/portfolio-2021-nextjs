@@ -1,16 +1,16 @@
 @use './colors' as c
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400 700&display=swap')
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap')
+/*Space Nono: 2 weights Regular 400, Bold 700 Italic not imported*/
 :root
     font-size: 16px
     overflow-x: hidden 
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5
     font-family: "Britanica-Regular" 
-    color: c.$headText
+    color: c.$light
     
 p,a,span,li,body
-    color: c.$bodyText
+    color: c.$body
     font-family: 'Space Mono', monospace 
 
 .hero h1  
@@ -18,13 +18,40 @@ p,a,span,li,body
  
 h1  
   font-size: 4rem 
- 
+h2 
+  font-size: 42px
+.ex-link 
+  font-size: 36px
 h3  
   font-size: 1.5rem
- 
+h6
+  font-size: 12px
+  font-weight: 700
 p  
   font-size: 1rem 
   line-height: 1.5rem 
- 
   
-  
+.social-list 
+  list-style: none
+  padding: 0
+
+.project_even 
+  height: 450px
+  text-align: right
+  position: relative
+
+.project_odd 
+  height: 450px
+  text-align: left
+  position: relative
+
+.project_even .project-title,
+.project_odd .project-title 
+  position: absolute
+  top: 30%
+  font-size: 3.5rem
+
+.project_even .project-title
+  right:32px
+.project_odd .project-title 
+  left: 32px
