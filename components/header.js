@@ -4,8 +4,9 @@ import Image from 'next/image'
 import Menu from './menu'
 import classNames from "classnames";
 import Logo from './logo'
+import MenuTrigger from './menuTrigger'
 
-export default function Header()  {
+export default function Header(props)  {
     const [isSticky, setSticky] = useState(false)
 
     useEffect(() => {
@@ -43,7 +44,7 @@ export default function Header()  {
                             <Logo/>                           
                         </div>
                         <div className="menu">
-                        <Menu/> 
+                            <MenuTrigger isVisible={props.isVisible} changeVisibility={props.changeVisibility}/>
                         </div>
                     </div>
                     <div className={ stickyClass }>
@@ -51,7 +52,7 @@ export default function Header()  {
                                 <Logo />
                         </div>
                         <div className="menu">
-                        <Menu/> 
+                            <MenuTrigger isVisible={props.isVisible} changeVisibility={props.changeVisibility}/>
                         </div>
                     </div>
                 </>

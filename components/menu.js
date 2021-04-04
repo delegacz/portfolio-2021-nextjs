@@ -7,7 +7,6 @@ export default function Menu() {
     const [active, setActive] = useState(false);
     
     useEffect(() => {
-       
         handleClick();
     },[])
 
