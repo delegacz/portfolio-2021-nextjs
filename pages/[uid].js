@@ -36,7 +36,11 @@ const maxWidthStyle =  {
 const ProjectHeader = ({ content }) => {
         return(
         <>
-            <Grid container alignItems="flex-end" style={maxWidthStyle}>
+            <Grid container alignItems="flex-end" style={{  
+                                                            maxWidth: "1440px", 
+                                                            margin: "0 auto",
+                                                            minHeight: "400px"
+                                                            }}>
                 <Grid item sm={12}>
                     <h1>{content.project_title[0].text}</h1>
                 </Grid>

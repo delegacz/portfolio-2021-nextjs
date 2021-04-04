@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps, router }) {
   }
 
   return (
-  <>  
+  <div style={{overflow: 'hidden'}}>  
       <Pointer key={ router.route }/> 
       <Header/>
       <Layout>
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps, router }) {
 
       </motion.div>
       </Layout>
-  </>
+  </div>
   )
 }
 

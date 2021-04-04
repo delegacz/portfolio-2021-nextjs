@@ -48,7 +48,7 @@ export default function Header()  {
                     </div>
                     <div className={ stickyClass }>
                         <div className="branding">
-                            <Logo />
+                                <Logo />
                         </div>
                         <div className="menu">
                         <Menu/> 
