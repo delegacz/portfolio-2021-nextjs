@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
-
+import Link from 'next/link'
 export default function Logo() {
 
     return (
+        <Link href="/">
         <svg width="96" height="38" viewBox="0 0 96 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <clipPath id="cut-off-white">
                     <rect x="0" y="0" width="200" height="100" />
@@ -61,6 +62,7 @@ export default function Logo() {
                 </g>
                 </g>
         </svg>
+        </Link>
 
     )
 }

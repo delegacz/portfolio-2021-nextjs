@@ -39,10 +39,8 @@ export default function Header()  {
         return (
                 <>
                     <div className="header">
-                        <div className="branding">
-                            <Link href="/">
-                                <Logo />
-                            </Link>
+                        <div className="branding">                           
+                            <Logo/>                           
                         </div>
                         <div className="menu">
                         <Menu/> 
@@ -50,9 +48,7 @@ export default function Header()  {
                     </div>
                     <div className={ stickyClass }>
                         <div className="branding">
-                            <Link href="/">
-                                <Logo />
-                            </Link>
+                            <Logo />
                         </div>
                         <div className="menu">
                         <Menu/> 

@@ -28,16 +28,20 @@ export default function Project({ content }) {
         )
     }   
 }
+const maxWidthStyle =  { 
+    maxWidth: "1440px", 
+    margin: "0 auto",
+}
 
 const ProjectHeader = ({ content }) => {
         return(
         <>
-            <Grid className="container" container alignItems="flex-end" style={{minHeight: "400px"}}>
+            <Grid container alignItems="flex-end" style={maxWidthStyle}>
                 <Grid item sm={12}>
                     <h1>{content.project_title[0].text}</h1>
                 </Grid>
             </Grid>
-            <Grid className="container" container space={2}>
+            <Grid container space={2} style={maxWidthStyle}>
                 <Grid item sm={8}>
                     <p>{content.project_short_description[0].text}</p>
                 </Grid>
